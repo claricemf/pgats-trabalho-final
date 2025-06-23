@@ -1,0 +1,20 @@
+{
+  "name": "pgats-trabalho-final",
+  "version": "1.0.0",
+  "main": "trabalho.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claricemf/pgats-trabalho-final.git"
+  },
+  "keywords": [],
+  "author": "Clarice Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claricemf/pgats-trabalho-final/issues"
+  },
+  "homepage": "https://github.com/claricemf/pgats-trabalho-final#readme",
+  "description": ""
+}
