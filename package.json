@@ -2,6 +2,7 @@
   "name": "pgats-trabalho-final",
   "version": "1.0.0",
   "main": "trabalho.js",
+  "type": "module",
   "scripts": {
     "test": "npx mocha testes/trabalho-final.js"
   },

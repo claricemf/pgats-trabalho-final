@@ -10,15 +10,21 @@ export function verificarSePodeSerAdotado(idade, porte) {
 }
 
 export function calcularConsumoDeRacao(nome, idade, peso) {
-  if (peso === 14.5) {
-    return 4350;
-  } 
+  console.log(`Calculando consumo de ração para ${nome}, idade: ${idade}, peso: ${peso}`);
+  return peso*300; // 300 gramas por kg de peso
 }
 
 export function decidirTipoDeAtividadePorPorte(porte) {
-  if (porte === 'pequeno') {
-    return 'brincar dentro de casa';
-  } 
+  switch (porte) {
+    case 'pequeno':
+      return 'brincar dentro de casa';
+    case 'médio': 
+      return 'caminhada no quarteirão';       
+    case 'grande':
+      return 'correr no parque';
+    default:
+      return 'porte invalido';
+  }
 }
 
 export async function buscarDadoAsync() {
