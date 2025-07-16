@@ -21,6 +21,10 @@ jobs:
       # instalação das dependências do projeto
       - name: Instalando dependências
         run: yarn
+
+      # instalação do Mocha
+      - name: Instalando Mocha
+        run: npm install -g mocha
       
       # executar os testes e2e
       - name: Executando Testes 
