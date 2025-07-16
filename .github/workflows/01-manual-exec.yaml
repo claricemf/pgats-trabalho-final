@@ -1,34 +1,28 @@
-#CI de nível 1 - Disparo manual a partir de 1 clique
-name:  'Execução Manual'
-
-# regras de disparo/gatilhos
-# gatilho de execução manual: workflow_dispatch
-on: 
+name: 'Execução Manual'
+on:
   workflow_dispatch:
 
 jobs:
   e2e-tests:
     runs-on: ubuntu-latest
-
+    # passos do script de build
     steps: 
-    # clone do projeto
+      # clone do projeto
       - uses: actions/checkout@v4
 
-    # instalação do Node.js
       - uses: actions/setup-node@v4
         with:
           node-version: 22.x
 
-      #instalação do Yarn
+      # instalação do Yarn
       - name: Instalando Yarn
         run: npm install -g yarn
-
-      #instalação do Yarn
-      - name: Instalando dependências do projeto
+      
+      # instalação das dependências do projeto
+      - name: Instalando dependências
         run: yarn
-
-      #Executando os testes E2E
-      - name: Executando testes E2E
+      
+      # executar os testes e2e
+      - name: Executando Testes 
         run: yarn test:e2e
-#yarn run e2e
-    
+        
