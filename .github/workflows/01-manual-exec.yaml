@@ -12,23 +12,23 @@ jobs:
 
     steps: 
     # clone do projeto
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
     # instalação do Node.js
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 22.x
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
 
-    #instalação do Yarn
-    - name: Instalando Yarn
-      run: npm install -g yarn
+      #instalação do Yarn
+      - name: Instalando Yarn
+        run: npm install -g yarn
 
-    #instalação do Yarn
-    - name: Instalando dependências do projeto
-      run: yarn
+      #instalação do Yarn
+      - name: Instalando dependências do projeto
+        run: yarn
 
-    #Executando os testes E2E
-    - name: Executando testes E2E
-      run: yarn test:e2e
+      #Executando os testes E2E
+      - name: Executando testes E2E
+        run: yarn test:e2e
 #yarn run e2e
     
